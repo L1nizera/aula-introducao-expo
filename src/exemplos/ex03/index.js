@@ -1,40 +1,47 @@
 import { useState } from 'react';
-
-import { View, Text, Button, TouchableOpacity } from 'react-native';
-
+import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
 
 export default function Exemplo3() {
 
     const [numero, setNumero] = useState(0);
 
-    console.log(numero);
     function handleIncrementar() {
-        setNumero(numero+ 1);
+        setNumero(numero + 1);
     }
 
+    function handleDecrementar() {
+        setNumero(numero - 1);
+    }
+
+    function handleZerar() {
+        setNumero(0);
+    }
 
     return (
         <View style={styles.container}>
             <Text style={styles.titulo}>Exemplo 1</Text>
-            <Button
-                onPress={() => { alert('Alguém tocou no botão!') }}
-                title="Alert"
-                color="#777"
-                accessibilityLabel="Botão de alerta"
 
-            />
-            <Text style={styles.Text}>{numero}</Text>   
+            <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+                
+                <TouchableOpacity style={styles.Esquerda} onPress={handleDecrementar}>
+                    <Text style={styles.texto}>-</Text>
+                </TouchableOpacity>
 
-            <TouchableOpacity   
+                <View style={{ marginHorizontal: 20 }}>
+                    <Text style={styles.textonumero}>{numero}</Text>
+                </View>
 
-                style={styles.botao}
-                onPress={() => handleIncrementar()}
 
-            >
-                <Text style={styles.txtbotao}>Incrementar número</Text>
+                <TouchableOpacity style={styles.Direita} onPress={handleIncrementar}>
+                    <Text style={styles.texto}>+</Text>
+                </TouchableOpacity>
+
+            </View>
+
+            <TouchableOpacity style={styles.Embaixo} onPress={handleZerar}>
+                <Text style={styles.texto}>Limpar</Text>
             </TouchableOpacity>
         </View>
-
     );
 }
