@@ -20,7 +20,7 @@ export default function Exemplo3() {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.titulo}>Exemplo 1</Text>
+            <Text style={styles.titulo}>Exemplo 3</Text>
 
             <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                 

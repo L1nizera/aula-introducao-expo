@@ -2,14 +2,14 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View} from 'react-native';
 import Constants from 'expo-constants';
 
-import Exemplo3 from './src/exemplos/ex03';
+import Atividade4 from './src/atividades/atv04';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 
 
 export default function App() {
   return (
     <View style={styles.container}>
-       <Exemplo3/>
+       <Atividade4/>
       <StatusBar style="light"/>
     </View>
   );
