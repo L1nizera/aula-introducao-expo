@@ -1,27 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
+import * as React from 'react';
 import { StyleSheet, View} from 'react-native';
 import Constants from 'expo-constants';
 
-import Atividade4 from './src/atividades/atv04';
-import { RFPercentage } from 'react-native-responsive-fontsize';
-
+import Index from 'D:/TEMP/Rhyan_Augusto/aula-introducao-expo/src/atividades/atv05';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-       <Atividade4/>
-      <StatusBar style="light"/>
-    </View>
-  );
-}
 
-const styles = StyleSheet.create({
+    const [n1, setN1] = useState(0);
+    const [n2, setN2] = useState(0);
+    const [total, setTotal] = useState(0);
+
+return (
+  <View style={styles.container}>
+    <Index />
+  </View>
+);
+}
+const styles = StyleSheet.create ({
   container: {
-    flex: 1,
-    backgroundColor: '#000',
-    //alignItems: 'center',
-    //justifyContent: 'center',
-    padding: RFPercentage (2.5),
-    paddingTop: Constants.StatusBarHeight,
-  },
-});
+    flex:1 ,
+    justifyContent: 'center',
+    paddingTop: Constants.statusBarHeight,
+    backgroundColor: '#C51162',
+    padding: 8,
+ },
+ });
