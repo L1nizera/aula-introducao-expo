@@ -1,71 +1,74 @@
-import React, { useState }  from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, TextInput } from 'react-native';
+import { useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import styles from './styles';
 
+export default function Exemplo05() {
+    const [n1, setN1] = useState(0);
+    const [n2, setN2] = useState(0);
+    const [total, setTotal] = useState(0);
 
-  export default function Index () {
+    function Soma() {
+        setTotal(parseInt(n1) + parseInt(n2));
+    }
 
+    function Sub() {
+        setTotal(parseInt(n1) - parseInt(n2));
+    }
 
-  const [n1, setN1] = useState(0);
-  const [n2, setN2] = useState(0);
-  const [total, setTotal] = useState(0);
+    function Div() {
+        setTotal(parseInt(n1) / parseInt(n2));
+    }
 
-  function Soma () {
-    setTotal(parseInt (n1) + parseInt(n2));
-  }
+    function Mult() {
+        setTotal(parseInt(n1) * parseInt(n2));
+    }
 
     return (
         <View style={styles.container}>
-        <Text style={styles.paragraph}>
-        Exemplo 5
-        </Text>
-        </View>
-    );
-    }
+            <Text style={styles.paragraph}>Exemplo 5</Text>
+            <Text style={styles.txtSaida}>Calculadora básica funcional</Text>
 
-    const styles = StyleSheet.create({
-        container: {
-            flex: 1,
-            justifyContent: 'center',
-            setStatusBarBackgroundColor: '#FF80AB',
-            paddin: 8,
-        },
-        paragraph: {
-            margin: 6,
-            fontSize: 18,
-            fontWeight: 'bold',
-            textAlign: 'center',
-            color: '#C51162',
-      },
-    });
-
-
-<View style={styles.container}>
-            <Text style={styles.paragraph}>Exemplo  5</Text>
-            <Text style={styles.txtSaida}> Calculadora Básica </Text>
-
-            <Text styles={styles.textLabel}> 1° número </Text>
-            <TextInput styles={styles.txtEntrada}
-            onChangeText={ (entrada) => setN1(entrada) }
-            value={n1}
-            />
-            
-            <Text style={styles.txtSaida}>+</Text>
-
-            <Text styles={styles.textLabel}> 2° número</Text>
-            <TextInput styles={styles.txtEntrada}
-            onChangeText={ (entada) => setN2(entrada)}
-            value={n2}
+            <Text style={styles.textLabel}>1º número</Text>
+            <TextInput
+                style={styles.txtEntrada}
+                onChangeText={(entrada) => setN1(entrada)}
+                value={n1.toString()}
+                keyboardType="numeric"
             />
 
-            <Text styles={[styles.txtSaida, {margin: 0}]}> = </Text>
 
-            <Text style={styles.textLabel}> Total </Text>
-            <TextInput styles={styles.textEntrada}
-            editable={false}
-            value={total}
-            /> 
+            <Text style={styles.textLabel}>2º número</Text>
+            <TextInput
+                style={styles.txtEntrada}
+                onChangeText={(entrada) => setN2(entrada)}
+                value={n2.toString()}
+                keyboardType="numeric"
+            />
 
-            <TouchableOpacity styles={styles.button} onPress={() => Soma ()}>
-                <Text styles={styles.textButton}> + </Text>
+            <Text style={[styles.txtSinal, { margin: 0 }]}> = </Text>
+
+            <Text style={styles.textLabel}>Total</Text>
+            <Text style={styles.txtEntrada}>{total}</Text>
+
+            <View style={styles.butoes}>
+            <TouchableOpacity style={styles.button} onPress={Soma}>
+                <Text style={styles.txtButton}> + </Text>
             </TouchableOpacity>
+
+            <TouchableOpacity style={styles.button} onPress={Sub}>
+                <Text style={styles.txtButton}> - </Text>
+            </TouchableOpacity> 
+
+            <TouchableOpacity style={styles.button} onPress={Div}>
+                <Text style={styles.txtButton}> / </Text>
+            </TouchableOpacity> 
+
+            <TouchableOpacity style={styles.button} onPress={Mult}>
+                <Text style={styles.txtButton}> * </Text>
+            </TouchableOpacity> 
+            </View>
+
         </View>
+
+    );
+}

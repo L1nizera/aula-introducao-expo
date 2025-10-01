@@ -9,37 +9,30 @@ const styles = StyleSheet.create({
     },
     paragraph: {
         margin: 6,
-        fontSize: 40,
+        fontSize: 18,
         fontWeight: 'bold',
         textAlign: 'center',
-        color: '#b300ffff',
+        color: '#C51162',
     },
     txtSaida: {
         margin: 6,
         fontSize: 22,
         fontWeight: 'bold',
         textAlign: 'center',
-        color: '#772aa0ff',
-    },
-    txtSinal: {
-        paddingTop: 15,
-        fontSize: 22,
-        fontWeight: 'bold',
-        textAlign: 'center',
-        color: '#772aa0ff',
+        color: '#E91E63',
     },
     txtEntrada: {
         borderWidth: 4,
         textAlign: 'center',
         fontSize: 20,
-        borderColor: '#4f0885ff',
+        borderColor: '#E91E63',
         height: 50,
-        color: '#4f0885ff',
+        color: '#E53935',
         borderRadius: 10,
         marginTop: 10,
     },
     button: {
-        backgroundColor: '#fb3b7bdb',
+        backgroundColor: '#E91E63',
         height: 40,
         justifyContent: 'center',
         borderRadius: 10,
@@ -47,16 +40,14 @@ const styles = StyleSheet.create({
         width: 60,
     },
     txtButton: {
-
         fontSize: 22,
-        color: '#000000ff',
+        color: '#FF80AB',
         textAlign: 'center',
     },
     textLabel: {
-
         fontSize: 16,
         fontWeight: 'bold',
-        color: '#000000ff',
+        color: '#c51162',
     },
     butoes:{
         flexDirection: 'row',

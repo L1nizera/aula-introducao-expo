@@ -1,10 +1,10 @@
 import { View, Text, Image } from 'react-native'; 
 
 import styles from './styles';
-import img from  'D:/TEMP/Rhyan_Augusto/aula-introducao-expo/assets/camiseta.jpg';
-import img1 from 'D:/TEMP/Rhyan_Augusto/aula-introducao-expo/assets/camiseta.jpg';
-import img2 from 'D:/TEMP/Rhyan_Augusto/aula-introducao-expo/assets/camiseta.jpg';
-import img3 from 'D:/TEMP/Rhyan_Augusto/aula-introducao-expo/assets/camiseta.jpg';
+import img from  'D:/TEMP/Rhyan_Augusto/aula-introducao-expo/assets/camiseta.jpg'
+import img1 from 'D:/TEMP/Rhyan_Augusto/aula-introducao-expo/assets/camiseta.jpg'
+import img2 from 'D:/TEMP/Rhyan_Augusto/aula-introducao-expo/assets/camiseta.jpg'
+import img3 from 'D:/TEMP/Rhyan_Augusto/aula-introducao-expo/assets/camiseta.jpg'
 
 import Card from 'D:/TEMP/Rhyan_Augusto/aula-introducao-expo/src/atividades/atv02/card';
 
