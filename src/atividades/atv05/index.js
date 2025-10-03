@@ -28,18 +28,18 @@ export default function Exemplo05() {
             <Text style={styles.paragraph}>Exemplo 5</Text>
             <Text style={styles.txtSaida}>Calculadora básica funcional</Text>
 
-            <Text style={styles.textLabel}>1º número</Text>
+            <Text style={styles.labelN1}>1º número</Text>
             <TextInput
-                style={styles.txtEntrada}
+                style={styles.txtN1}
                 onChangeText={(entrada) => setN1(entrada)}
                 value={n1.toString()}
                 keyboardType="numeric"
             />
 
 
-            <Text style={styles.textLabel}>2º número</Text>
+            <Text style={styles.labelN2}>2º número</Text>
             <TextInput
-                style={styles.txtEntrada}
+                style={styles.txtN2}
                 onChangeText={(entrada) => setN2(entrada)}
                 value={n2.toString()}
                 keyboardType="numeric"
@@ -48,7 +48,7 @@ export default function Exemplo05() {
             <Text style={[styles.txtSinal, { margin: 0 }]}> = </Text>
 
             <Text style={styles.textLabel}>Total</Text>
-            <Text style={styles.txtEntrada}>{total}</Text>
+            <Text style={styles.txtTotal}>{total}</Text>
 
             <View style={styles.butoes}>
             <TouchableOpacity style={styles.button} onPress={Soma}>
