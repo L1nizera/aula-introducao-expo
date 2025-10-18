@@ -3,14 +3,14 @@ import { StyleSheet, View } from 'react-native';
 import Constants from 'expo-constants';
     
 import Index from 'D:/TEMP/Rhyan_Augusto/aula-introducao-expo/src/exemplos/ex05';
-import Exemplo05 from 'D:/TEMP/Rhyan_Augusto/aula-introducao-expo/src/exemplos/ex05';
 import Atividade05 from 'D:/TEMP/Rhyan_Augusto/aula-introducao-expo/src/atividades/atv05';
+import Exemplo06 from './src/exemplos/ex06';
 
 export default function App() {
 
 return (
   <View style={styles.container}>
-    <Atividade05 />
+    <Exemplo06 />
   </View>
 );
 }
@@ -19,7 +19,7 @@ const styles = StyleSheet.create ({
     flex:1 ,
     justifyContent: 'center',
     paddingTop: Constants.statusBarHeight,
-    backgroundColor: '#b700ffff',
+    backgroundColor: '#AAA',
     padding: 8,
  },
  });
