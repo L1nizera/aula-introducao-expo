@@ -5,12 +5,13 @@ import Constants from 'expo-constants';
 import Index from 'D:/TEMP/Rhyan_Augusto/aula-introducao-expo/src/exemplos/ex05';
 import Atividade05 from 'D:/TEMP/Rhyan_Augusto/aula-introducao-expo/src/atividades/atv05';
 import Exemplo06 from './src/exemplos/ex06';
+import Exemplo08 from './src/exemplos/ex08';
 
 export default function App() {
 
 return (
   <View style={styles.container}>
-    <Exemplo06 />
+    <Exemplo08 />
   </View>
 );
 }

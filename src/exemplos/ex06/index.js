@@ -13,6 +13,7 @@ export default function Exemplo06() {
         setResultados(valor);
     }
 
+
     return (
 
         
@@ -35,6 +36,6 @@ export default function Exemplo06() {
         </TouchableOpacity>
         <Text style={styles.resultados}>{resultados.toFixed(2)}</Text>
     </View>
-    
+ 
 )
     }
